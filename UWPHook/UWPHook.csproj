@@ -11,9 +11,18 @@
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 		<ApplicationIcon>Resources\hook2.ico</ApplicationIcon>
 		<PublishSingleFile>true</PublishSingleFile>
-		<RuntimeIdentifier>win-x64</RuntimeIdentifier>
+		<RuntimeIdentifiers>win;win-x64;win-arm64</RuntimeIdentifiers>
 		<IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
 		<NoWarn>MSB3243;CA1416;CA2200;CS8629;CS8602;SYSLIB0014</NoWarn>
+		<Platforms>AnyCPU;x64;ARM64</Platforms>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
+		<RuntimeIdentifier>win-arm64</RuntimeIdentifier>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+		<RuntimeIdentifier>win-x64</RuntimeIdentifier>
 	</PropertyGroup>
 
 	<ItemGroup>
