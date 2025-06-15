@@ -1,0 +1,3 @@
+[submodule "SharpSteam"]
+	path = SharpSteam
+	url = https://github.com/BrianLima/SharpSteam.git
